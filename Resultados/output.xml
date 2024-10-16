@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230717 15:36:55.645" rpa="false" schemaversion="4">
+<suite id="s1" name="Teste Desktop" source="C:\Curso\Desktop\teste_desktop.robot">
+<kw name="Start Sikuli Process" library="SikuliLibrary" type="SETUP">
+<msg timestamp="20230717 15:36:55.702" level="INFO">Starting process:
+java -jar "C:\Users\Lucas Gabriel\AppData\Local\Programs\Python\Python311\Lib\site-packages\SikuliLibrary\lib\SikuliLibrary.jar" 51558 C:\Curso\Desktop\Resultados</msg>
+<msg timestamp="20230717 15:36:55.708" level="INFO">Start sikuli java process on port 51558</msg>
+<msg timestamp="20230717 15:36:56.796" level="INFO">Sikuli java process is started</msg>
+<status status="PASS" starttime="20230717 15:36:55.694" endtime="20230717 15:36:58.648"/>
+</kw>
+<test id="s1-t1" name="New Mode" line="7">
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>C:\Curso</arg>
+<doc>Add image path</doc>
+<msg timestamp="20230717 15:36:58.667" level="INFO">[error] ImagePath: addHTTP: not possible: C:Curso
+java.net.MalformedURLException: For input string: "Curso"</msg>
+<status status="PASS" starttime="20230717 15:36:58.649" endtime="20230717 15:36:58.667"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>branco.png</arg>
+<doc>Click</doc>
+<msg timestamp="20230717 15:37:02.140" level="INFO">[error] ImagePath: find: not there: branco.png</msg>
+<msg timestamp="20230717 15:37:02.140" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1689619021886.png'/&gt;
+[error] ImagePath: find: not there: branco.png</msg>
+<msg timestamp="20230717 15:37:02.140" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(branco.png -- not valid!) S: 0.699999988079071</msg>
+<status status="FAIL" starttime="20230717 15:36:58.668" endtime="20230717 15:37:02.140"/>
+</kw>
+<status status="FAIL" starttime="20230717 15:36:58.649" endtime="20230717 15:37:02.141">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(branco.png -- not valid!) S: 0.699999988079071</status>
+</test>
+<kw name="Stop Remote Server" library="SikuliLibrary" type="TEARDOWN">
+<doc>Stops the remote server.</doc>
+<msg timestamp="20230717 15:37:02.147" level="INFO">Robot Framework remote server stopping</msg>
+<status status="PASS" starttime="20230717 15:37:02.143" endtime="20230717 15:37:02.147"/>
+</kw>
+<status status="FAIL" starttime="20230717 15:36:55.648" endtime="20230717 15:37:02.147"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Teste Desktop">Teste Desktop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
